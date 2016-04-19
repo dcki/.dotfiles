@@ -10,7 +10,7 @@ export LSCOLORS=gxfxcxdxbxegedabagaced
 
 ##### GIT #####
 
-# You can check the value of an alias with 'alias name', e.g. 'alias glog'.
+# You can check the value of an alias with `alias name` or `type name`, e.g. `alias glog`.
 alias glog='git log'
 alias glogp='git log -p'
 alias gits='git status'
