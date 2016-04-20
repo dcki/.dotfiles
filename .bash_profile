@@ -24,6 +24,15 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
+##### RAILS ENGINE COMMANDS #####
+
+function engine_tests {
+  SAVE_RAILS_ENV=$RAILS_ENV
+  export RAILS_ENV=test
+  bundle exec rake app:db:drop && bundle exec rake app:db:create && bundle exec rake app:db:schema:load && bundle exec rake app:db:test:prepare && bundle exec rspec && bundle exec rake app:konacha:run
+  export RAILS_ENV=$SAVE_RAILS_ENV
+}
+
 ##### CHROME MULTIPLE TABS #####
 
 # You can use this to open multiple tabs in Chrome!
